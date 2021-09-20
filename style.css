@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
+/* On specifie la manière de disposer les éléments, en ligne pour DESKTOP, en colone pour MOBILE*/
+body {
+  background-color: #202731;
+}
+ul {
+  list-style: none ;
+}
+#content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 25px;
+  border-radius: 20px;
+  background-color: red;
+  box-shadow: 10px 5px 5px grey;
+}
+
+/* Pour centrer les éléments au sein de BODY, on leur donne une taille égale pour bien répratir le contenu*/
+#content > * {
+  width: 40%;
+  margin: 0 5% 0 5%;
+}
+
+#name {
+  width: inherit;
+  margin: auto;
+  padding: auto;
+}
+#profil-pic {
+  border-radius: 100px;
+  padding: 2px;
+  border: 2px solid red;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #afafaf;
+}
+#motivation {
+  list-style: none;
+}
+
+a:hover {
+  color: #ae557a;
+}
+/* Les media queries servent ici a afficher le contenie en fonction de la taille d'ecran de l'utilisateur*/
+@media screen and (max-width: 640px) {
+  #content {
+    flex-direction: column;
+  }
+
+  #content > * {
+    width: 90%;
+    margin: 0 5% 0 5%;
+  }
+}
