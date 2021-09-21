@@ -2,19 +2,21 @@
 
 /* On specifie la manière de disposer les éléments, en ligne pour DESKTOP, en colone pour MOBILE*/
 body {
-  background-color: #202731;
+  background-color: #ffffff;
 }
+
 ul {
-  list-style: none ;
+  list-style: none;
 }
 #content {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
   margin: 25px;
   border-radius: 20px;
   background-color: red;
-  box-shadow: 10px 5px 5px grey;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 /* Pour centrer les éléments au sein de BODY, on leur donne une taille égale pour bien répratir le contenu*/
@@ -50,6 +52,7 @@ a:hover {
 @media screen and (max-width: 640px) {
   #content {
     flex-direction: column;
+    justify-content: center;
   }
 
   #content > * {
