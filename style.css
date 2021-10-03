@@ -1,62 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 
 /* On specifie la manière de disposer les éléments, en ligne pour DESKTOP, en colone pour MOBILE*/
-body {
-  background-color: #ffffff;
+html {
+  min-height: 100%;
 }
 
+body {
+  background-image: linear-gradient(#2d134f 36.2%, #1a1454 72.8%);
+}
 ul {
   list-style: none;
 }
-#content {
+* {
+  color: #87ebff;
+}
+
+.name {
+  /* font-size: 40px; */
+  letter-spacing: 0.0625em;
+}
+.content {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  margin: 25px;
-  border-radius: 20px;
-  background-color: red;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  justify-content: center;
+  margin: auto;
 }
+/*  */
 
 /* Pour centrer les éléments au sein de BODY, on leur donne une taille égale pour bien répratir le contenu*/
-#content > * {
-  width: 40%;
+.content > * {
+  width: 100%;
   margin: 0 5% 0 5%;
 }
 
-#name {
+.name {
   width: inherit;
   margin: auto;
   padding: auto;
-}
-#profil-pic {
-  border-radius: 100px;
-  padding: 2px;
-  border: 2px solid red;
+  letter-spacing: 0.0625em;
 }
 
+.profil-pic {
+  border-radius: 100px;
+  padding: 2px;
+}
+
+h1 {
+  text-align: center;
+}
+h1,
+h2 {
+  color: #ffe275;
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+}
 a {
   text-decoration: none;
   font-weight: bold;
-  color: #afafaf;
+  color: #45ffb4;
 }
-#motivation {
-  list-style: none;
+.motivation {
+  letter-spacing: 0.0625em;
+}
+.links {
+  letter-spacing: 0.0625em;
 }
 
 a:hover {
-  color: #ae557a;
+  color: #45ff3d;
 }
 /* Les media queries servent ici a afficher le contenie en fonction de la taille d'ecran de l'utilisateur*/
 @media screen and (max-width: 640px) {
-  #content {
+  .content {
     flex-direction: column;
     justify-content: center;
   }
 
-  #content > * {
-    width: 90%;
+  .content {
+    width: 50%;
     margin: 0 5% 0 5%;
   }
 }
