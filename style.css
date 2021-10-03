@@ -1,22 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
-
 /* On specifie la manière de disposer les éléments, en ligne pour DESKTOP, en colone pour MOBILE*/
 html {
   min-height: 100%;
 }
 
 body {
-  background-image: linear-gradient(#2d134f 36.2%, #1a1454 72.8%);
+  background: #2d238f;
 }
+
 ul {
   list-style: none;
 }
 * {
-  color: #87ebff;
+  color: #fff;
 }
 
 .name {
-  /* font-size: 40px; */
   letter-spacing: 0.0625em;
 }
 .content {
@@ -29,12 +28,13 @@ ul {
 /*  */
 
 /* Pour centrer les éléments au sein de BODY, on leur donne une taille égale pour bien répratir le contenu*/
-.content > * {
+.content > * > .infos {
   width: 100%;
   margin: 0 5% 0 5%;
 }
-
-.name {
+.name,
+.motivation,
+.links {
   width: inherit;
   margin: auto;
   padding: auto;
@@ -45,39 +45,37 @@ ul {
   border-radius: 100px;
   padding: 2px;
 }
-
-h1 {
-  text-align: center;
-}
 h1,
 h2 {
   color: #ffe275;
+  text-align: center;
   font-family: sans-serif;
   font-size: 30px;
   font-weight: 100;
+}
+h2 {
+  margin: auto;
 }
 a {
   text-decoration: none;
   font-weight: bold;
   color: #45ffb4;
 }
-.motivation {
-  letter-spacing: 0.0625em;
-}
-.links {
-  letter-spacing: 0.0625em;
+.infos {
+  display: flex;
+  flex-direction: column;
 }
 
 a:hover {
   color: #45ff3d;
 }
-/* Les media queries servent ici a afficher le contenie en fonction de la taille d'ecran de l'utilisateur*/
+/* Les media queries servent ici a afficher le contenue en fonction de la taille d'ecran de l'utilisateur*/
 @media screen and (max-width: 640px) {
-  .content {
+  .content,
+  .infos {
     flex-direction: column;
     justify-content: center;
   }
-
   .content {
     width: 50%;
     margin: 0 5% 0 5%;
