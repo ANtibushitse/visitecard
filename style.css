@@ -1,95 +1,86 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
-/* 1em = 16px*/
-
+/* 
+ 1em =16 px*/
 /* On specifie la manière de disposer les éléments, en ligne pour DESKTOP, en colone pour MOBILE*/
 body {
-  background: #2d238f;}
-
-article {
-  height:auto;
-  width:auto;
-  padding:45px;
+  background-color: #3D278F;
+  display:flex;
+  justify-content:center;
+  place-items: center;
+  line-height: 1.42;
+  min-height: 100vh;
+  color: #ffff
 }
+ul {
+  list-style: none ;
+}
+
 .content {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-around;
-  margin: auto;
-}
-.content > * {
-  width: 100%;
-  margin: 0 5% 0 5%;
-}
-
-
-ul {
-  list-style: none;
-}
-* {
-  color: #fff;
-}
-
-.name {
-  letter-spacing: 0.0625em;
-}
-h1,
-h2 {
-  margin: auto;
-  color: #ffe275;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 30px;
-  width: 100;
-  font-weight: 100;
+  margin: 25px;
+  border-radius: 20px;  
 }
 
 
 /* Pour centrer les éléments au sein de BODY, on leur donne une taille égale pour bien répratir le contenu*/
+.content > * {
+  width: 100%;
+  margin: 0 5% 0 5%;
+}
 .name,
 .motivation,
 .links {
-  width: inherit;
+  width: auto;;
   margin: auto;
   padding: auto;
   letter-spacing: 0.0625em;
 
 }
 
+h2{
+  margin: auto;
+  color: #ffe275;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 30px;
+  width: 100;
+  font-weight: 100;}
+
+/* Je positionne la phoyto d eprofil au centre  */
 .profil-pic {
   border-radius: 100px;
   padding: 2px;
+  border: 2px solid red;
   
 }
 #img-container{
-display: flex;
-width:100%;
-justify-content: center;
-align-items: center;
-
+  display:flex;
+  flex-direction:column;
+  align-items: center;
 }
-
 a {
   text-decoration: none;
   font-weight: bold;
-  color: #45ffb4;
+  color: #afafaf;
 }
-.infos {
-  display: flex;
-  flex-direction: column;
+.motivation{
+  list-style: none;
 }
 
 a:hover {
-  color: #45ff3d;
+  color: #ae557a;
 }
 /* Les media queries servent ici a afficher le contenue en fonction de la taille d'ecran de l'utilisateur*/
-@media screen and (max-width: 640px) {
-  .content,
-  .infos {
+@media screen and (max-width: 40em) {
+.content,
+.infos {
     flex-direction: column;
     justify-content: center;
   }
-  .content {
+
+  .content > * {
     width: 50%;
     margin: 0 5% 0 5%;
   }
