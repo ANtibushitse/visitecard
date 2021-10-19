@@ -3,10 +3,11 @@
  1em =16 px*/
 /* On specifie la manière de disposer les éléments, en ligne pour DESKTOP, en colone pour MOBILE*/
 body {
-  background-color: #3D278F;
+  background-color: #121212 ;
   display:flex;
   justify-content:center;
   place-items: center;
+  font-size: 1.688em;
   line-height: 1.42;
   min-height: 100vh;
   color: #ffff
@@ -21,6 +22,7 @@ ul {
   justify-content: space-around;
   margin: 25px;
   border-radius: 20px;  
+  padding:2em
 }
 
 
@@ -44,8 +46,7 @@ h2{
   color: #ffe275;
   text-align: center;
   font-family: sans-serif;
-  font-size: 30px;
-  width: 100;
+  font-size: 1.875em;
   font-weight: 100;}
 
 /* Je positionne la phoyto d eprofil au centre  */
@@ -62,15 +63,17 @@ h2{
 }
 a {
   text-decoration: none;
-  font-weight: bold;
-  color: #afafaf;
+  font-weight: lighter;
+  color: #ffff;
 }
 .motivation{
   list-style: none;
 }
-
+a{
+  color: #ffff;
+}
 a:hover {
-  color: #ae557a;
+  color: red
 }
 /* Les media queries servent ici a afficher le contenue en fonction de la taille d'ecran de l'utilisateur*/
 @media screen and (max-width: 40em) {
